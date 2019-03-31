@@ -1,0 +1,22 @@
+package Chap02_10;
+
+import java.util.Scanner;
+
+public class Chap02_10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		int[] p1 = new int[3];
+		int[] p2 = new int[3];
+
+		System.out.print("첫번째 원의 중심과 반지름 입력>>");
+		for (int i = 0; i < p1.length; i++) {
+			p[i] = scanner.nextInt();
+		}
+		
+		System.out.print("두번째 원의 중심과 반지름 입력>>");
+
+		scanner.close();
+	}
+}

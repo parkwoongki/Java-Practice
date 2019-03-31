@@ -1,0 +1,14 @@
+package Chap02_4;
+
+import java.util.Scanner;
+
+public class Chap02_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] intArray = new int [3];
+		Scanner scanner - new Scanner(System.in);
+		
+		
+	}
+}
