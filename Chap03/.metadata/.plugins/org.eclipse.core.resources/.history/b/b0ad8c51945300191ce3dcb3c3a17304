@@ -1,0 +1,9 @@
+package Chap03_14;
+
+public class Chap03_14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String []course= {"Java","C++","HTML5","컴퓨터구조","안드로이드"}
+	}
+}

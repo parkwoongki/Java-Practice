@@ -1,0 +1,23 @@
+package Chap03_12;
+
+public class Chap03_12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int sum = 0;
+		int i = 0;
+
+		for (int j = 0; j < args.length; j++) {
+
+			try {
+				sum += Integer.parseInt(args[i]);
+			} catch (NumberFormatException e) {
+				System.out.print("Error!");
+			} finally {
+				i++;
+			}
+		}
+
+		System.out.println(sum);
+	}
+}

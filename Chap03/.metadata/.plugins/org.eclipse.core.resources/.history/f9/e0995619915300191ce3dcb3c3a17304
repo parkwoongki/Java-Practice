@@ -1,0 +1,34 @@
+package Chap03_13;
+
+public class Chap03_13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int gameNum = 0;
+
+		while (gameNum < 100) {
+			gameNum++;
+
+			switch (gameNum / 10) {
+			case 0:
+				if ((gameNum % 3 == 0) && (gameNum != 0)) {
+					System.out.print(gameNum + " ");
+					System.out.println("¹Ú¼öÂ¦");
+					break;
+				}
+			default:
+				if ((gameNum / 10) % 3 == 0) {
+					if ((gameNum % 10) % 3 == 0 && gameNum != 0)
+						System.out.println(gameNum + " ¹Ú¼öÂ¦Â¦");
+					else
+						System.out.println(gameNum + " ¹Ú¼öÂ¦");
+
+				} else {
+					if ((gameNum % 10) % 3 == 0 && (gameNum % 10 != 0))
+						System.out.println(gameNum + " ¹Ú¼öÂ¦");
+				}
+				break;
+			}
+		}
+	}
+}

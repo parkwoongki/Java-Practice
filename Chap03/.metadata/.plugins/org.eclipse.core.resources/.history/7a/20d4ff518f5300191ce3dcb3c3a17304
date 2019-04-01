@@ -1,0 +1,40 @@
+package Chap03_13;
+
+public class Chap03_13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int gameNum = 0;
+
+		while (gameNum < 100) {
+			gameNum++;
+
+			switch (gameNum / 10) {
+			case 0:
+				if ((gameNum % 10) % 3 == 0 && gameNum % 3 != 0) {
+					System.out.println(gameNum + " ");
+					System.out.println("박수짝");
+					break;
+				}
+			default:
+
+				// 두 숫자가 모두 369가 아닐 때 박수마저 출력하지 않는다.
+				// if (((gameNum / 10) % 3 != 0) && ((gameNum % 10) % 3 == 0))
+				// System.out.print("박수");
+				if ((gameNum / 10) % 3 == 0) {
+					System.out.print(gameNum + " ");
+					System.out.println("박수짝");
+				}
+				// 0일때도 박수치면 안되므로 맨 처음 조건에 0이 아닐때를 꼭 넣는다.
+				else if ((gameNum % 10) != 0 && (gameNum % 10) % 3 == 0) {
+					System.out.print(gameNum + " ");
+					System.out.println("박수짝짝");
+				}
+				break;
+
+			}
+		}
+
+	}
+
+}

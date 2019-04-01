@@ -1,0 +1,75 @@
+package Chap03_8;
+
+import java.util.Scanner;
+
+public class Chap03_8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Scanner scanner = new Scanner(System.in);
+		//
+		// System.out.print("정수 몇개 ? ");
+		// int n = scanner.nextInt();
+		// int arr[] = new int[n];
+		//
+		// for(int i=0; i<n; i++) {
+		// int num=(int)(Math.random()*100+1);
+		//
+		// for(int j=0; j<=i; j++) {
+		// if(arr[j]!=num) {
+		// if(j==i)
+		// arr[i]=num;
+		// }
+		// else if(arr[j]==num){
+		// i--;
+		// break;
+		// }
+		// }
+		// }
+		//
+		// for(int i=0; i<n; i++) {
+		// System.out.printf("%-3d ",arr[i]);
+		// if((i+1)%10==0)
+		// System.out.println();
+		// }
+
+		Scanner scanner = new Scanner(System.in);
+		int row = 0;
+		int column = 0;
+		boolean overlap = false;
+
+		System.out.println("정수 몇개?");
+		int n = scanner.nextInt();
+
+		// 예를 들어 24이면 10 10 4 이런식으로 3줄이 나오므로 아래처럼 행의 개수와 마지막 열의 개수를 지정해주는 작업
+		row = n / 10 + 1;
+		column = n % 10; // 열의 마지막의 행의 길이
+		int intArray[][] = new int[row][];
+
+		// 각각의 단위 맞게 행열을 생성해주는 작업
+		for (int i = 0; i < row; i++) {
+			intArray[i] = new int[10];
+		}
+		intArray[row - 1] = new int[column];
+
+		for (int i = 0; i < intArray.length; i++) {
+			// 조건문 설명 : 행이 마지막 행일 때 열의 갯수는 column으로 처리
+			for (int j = 0; j < intArray[i].length; j++) {
+				intArray = (int) (Math.random() * 100 + 1);
+				for (int k = 0; k < i + 1; k++)
+					for (int l = 0; l < j; l++)
+						if (intArray[k][l] == intArray[i][j])
+							if (i == k && j == k - 1)
+								overlap = true;
+
+				if (overlap) {
+					j--;
+					overlap = false;
+					continue;
+				}
+				System.out.print(intArray[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+}

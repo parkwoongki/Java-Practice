@@ -1,0 +1,45 @@
+package Chap03_16;
+
+import java.util.Scanner;
+
+public class Chap03_16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		String com[] = { "가위", "바위", "보" };
+		String rps[] = { "바위", "보", "가위" };
+		String user;
+
+		System.out.println("컴퓨터와 가위 바위 보 게임을 합니다.");
+
+		do {
+			int n = (int) (Math.random() * 3);
+
+			System.out.println("가위 바위 보!>>");
+			user = scanner.next();
+
+			if (user.equals("그만"))
+				break;
+
+			if (com[n].equals(user))
+				System.out.println(user + ", 비겼습니다.");
+			else {
+				if (com[n].equals(user))
+					System.out.println(user + ", 이겼습니다.");
+
+				else
+					System.out.println(user + ", 졌습니다.");
+
+			}
+			// if (n == 0 && user.equals(0))
+			// System.out.println(user + ", 이겼습니다.");
+			// if (n == 1 && user.equals(1))
+			// System.out.println(user + ", 이겼습니다.");
+			// if (n == 2 && user.equals(2))
+			// System.out.println(user + ", 이겼습니다.");
+
+		} while (true);
+		System.out.println("게임을 종료합니다...");
+	}
+}

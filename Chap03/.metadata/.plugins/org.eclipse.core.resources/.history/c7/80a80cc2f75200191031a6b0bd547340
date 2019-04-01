@@ -1,0 +1,46 @@
+package Chap03_6;
+
+import java.util.Scanner;
+
+public class Chap03_6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner inputMoney = new Scanner(System.in);
+		int[] unit = { 50000, 10000, 1000, 500, 100, 50, 10, 1 };
+		int[] a = new int[6];
+
+		System.out.print("잔액을 입력해주세요. : ");
+		int money = inputMoney.nextInt();
+
+		if (money >= 50000) {
+			a[0] = (money / 50000);
+			money -= 50000 * a[0];
+		}
+		if (money >= 10000) {
+			a[1] = (money / 10000);
+			money -= 10000 * a[1];
+		}
+		if (money >= 1000) {
+			a[2] = (money / 1000);
+			money -= 1000 * a[2];
+		}
+		if (money >= 100) {
+			a[3] = (money / 100);
+			money -= 100 * a[3];
+		}
+		if (money >= 50) {
+			a[4] = (money / 50);
+			money -= 50 * a[4];
+		}
+		if (money >= 10) {
+			a[5] = (money / 10);
+			money -= 10 * a[5];
+		}
+
+		System.out.println("50000원 : " + a[0] + ", 10000원 : " + a[1]
+				+ ", 1000원 : " + a[2] + ", 100원 : " + a[3] + ", 50원 : " + a[4]
+				+ ", 10원 : " + a[5]);
+	}
+
+}

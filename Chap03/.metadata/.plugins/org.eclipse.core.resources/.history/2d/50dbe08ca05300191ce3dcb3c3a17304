@@ -1,0 +1,57 @@
+package Chap03_16;
+
+import java.util.Scanner;
+
+public class Chap03_16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		String str[] = { "가위", "바위", "보" };
+		String user;
+
+		System.out.println("컴퓨터와 가위 바위 보 게임을 합니다.");
+
+		do {
+			/* 컴퓨터가 가위바위보 정하는 구간 */
+			int n = (int) (Math.random() * 3);
+			String computer = null;
+			for (int i = 0; i < 3; i++) {
+				if (str[n].equals(str[i])) {
+					computer = str[i];
+					break;
+				}
+			}
+
+			/* 사용자가 가위바위보 정하는 구간 */
+			System.out.print("가위 바위 보!>>");
+			user = scanner.next();
+
+			/* 둘이 비교 하는 구간 */
+			if (user.equals("그만"))
+				break;
+
+			if (user.equals(computer))
+				System.out.println(user + ", 비겼습니다.");
+			else {
+				if (user.equals("가위"))
+					if (computer.equals("보"))
+						System.out.println(user + ", 이겼습니다.");
+					else
+						System.out.println(user + ", 졌습니다.");
+				if (user.equals("바위"))
+					if (computer.equals("가위"))
+						System.out.println(user + ", 이겼습니다.");
+					else
+						System.out.println(user + ", 졌습니다.");
+				if (user.equals("보"))
+					if (computer.equals("바위"))
+						System.out.println(user + ", 이겼습니다.");
+					else
+						System.out.println(user + ", 졌습니다.");
+			}
+		} while (true);
+
+		System.out.println("게임을 종료합니다...");
+	}
+}
