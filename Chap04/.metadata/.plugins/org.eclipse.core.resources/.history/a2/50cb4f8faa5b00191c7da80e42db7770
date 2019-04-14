@@ -1,0 +1,22 @@
+package Chap02;
+
+class Grade{
+	private int average;
+	
+	public Grade(int math, int science, int english){
+		this.average = (math+science+english)/3;
+	}
+	
+	public int average(){
+		return average;
+	}
+}
+
+public class Chap02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

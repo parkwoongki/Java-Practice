@@ -1,0 +1,20 @@
+package Chap05;
+
+class Circle{
+	private double x,y;
+	private int radius;
+	public Circle(double x, double y, int radius){
+		this.x =x;
+		this.y=y;
+		this.radius=radius;
+	}
+}
+
+public class Chap05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package Chap10;
+
+class Dictionary {
+	private static String[] kor = { "»ç¶û", "¾Æ±â", "µ·", "¹Ì·¡", "Èñ¸Á" };
+	private static String[] eng = {};
+}
+
+public class Chap10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

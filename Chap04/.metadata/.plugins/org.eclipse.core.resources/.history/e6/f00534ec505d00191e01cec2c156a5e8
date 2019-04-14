@@ -1,0 +1,96 @@
+package Chap11;
+
+import java.util.Scanner;
+
+import org.omg.Messaging.SyncScopeHelper;
+
+class Add {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a + this.b;
+	}
+}
+
+class Sub {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a - this.b;
+	}
+}
+
+class Mul {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a * this.b;
+	}
+}
+
+class Div {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a / this.b;
+	}
+}
+
+public class Chap11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		int a, b;
+		String mode;
+
+		System.out.print("두 정수와 연산자를 입력하시오>>");
+		a = scanner.nextInt();
+		b = scanner.nextInt();
+		mode = scanner.next();
+
+		switch (mode) {
+		case "+":
+			Add add = new Add();
+			add.setValue(a, b);
+			System.out.println(add.calculate());
+			break;
+		case "-":
+			Sub sub = new Sub();
+			sub.setValue(a, b);
+			System.out.println(sub.calculate());
+			break;
+		case "*":
+			Mul mul = new Mul();
+			add.setValue(a, b);
+			System.out.println(add.calculate());
+			break;
+		case "/":
+			Add add = new Add();
+			add.setValue(a, b);
+			System.out.println(add.calculate());
+			break;
+		}
+	}
+
+}

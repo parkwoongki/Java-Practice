@@ -1,0 +1,31 @@
+package Chap11;
+
+class Add {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+}
+
+class Sub {
+
+}
+
+class Mul {
+
+}
+
+class Div {
+
+}
+
+public class Chap11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

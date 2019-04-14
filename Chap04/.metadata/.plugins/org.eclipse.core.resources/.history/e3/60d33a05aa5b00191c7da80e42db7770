@@ -1,0 +1,16 @@
+package Chap02;
+
+public class Grade{
+	Grade(){
+		
+	}
+}
+
+public class Chap02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

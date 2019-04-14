@@ -1,0 +1,25 @@
+package Chap05;
+
+import java.util.Scanner;
+
+class Circle{
+	private double x,y;
+	private int radius;
+	public Circle(double x, double y, int radius){
+		this.x =x;
+		this.y=y;
+		this.radius=radius;
+	}
+	public void show(){
+		System.out.println("("+this.x+","+this.y+")"+radius);
+	}
+}
+
+public class Chap05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+	}
+
+}

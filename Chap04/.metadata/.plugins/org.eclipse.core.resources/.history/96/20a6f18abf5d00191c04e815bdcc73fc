@@ -1,0 +1,159 @@
+package Chap12;
+
+import java.util.Scanner;
+
+class Seat {
+	String[] seat = { "---", "---", "---", "---", "---", "---", "---", "---",
+			"---", "---" }; // 일단 빈칸이다.
+
+	public void setSeat(String name, int num) {
+		seat[num - 1] = name; // 몇번이냐고 하면 n-1번째 것에 세팅해야됨
+	}
+
+	public String getSeat(int i) {
+		return seat[i]; // 해당 순번의 이름을 가져오는 메서드, 반복문이랑 같이 사용
+	}
+
+	public void show() { // 해당 좌석 클래스의 좌석 현황을 보여주는 show()
+		for (int i = 0; i < seat.length; i++) {
+			System.out.print(seat[i] + " ");
+		}
+		System.out.println("");
+	}
+
+	public boolean AlreadyResv(int i) {
+		if (this.seat[i].equals("---"))
+			return true;
+		else
+			return false;
+	}
+}
+
+class ReservationSystem {
+	Scanner scanner;
+	Seat[] seat = new Seat[3]; // 0:S, 1:A, 2:B
+
+	public ReservationSystem() {
+		scanner = new Scanner(System.in);
+		for (int i = 0; i < seat.length; i++) {
+			seat[i] = new Seat();
+		}
+	}
+
+	public int selectClass() {
+		int seatClass;
+
+		do {
+			System.out.print("좌석구분 S(1), A(2), B(3)>>");
+			seatClass = scanner.nextInt();
+			if ((seatClass < 1) || (seatClass > 3))
+				System.out.println("해당하는 좌석 클래스가 없습니다. 다시 입력하십시오.");
+		} while ((seatClass < 1) || (seatClass > 3));
+
+		return seatClass;
+	}
+
+	public int selectSeatNum() {
+		int num;
+
+		do {
+			System.out.print("번호>>");
+			num = scanner.nextInt();
+			if ((num < 1) || (num > 10))
+				System.out.println("해당하는 좌석 없습니다. 다시 입력하십시오.");
+		} while ((num < 1) || (num > 10));
+
+		return num;
+	}
+
+	public String classApl(int i) {
+		if (i == 0)
+			return "S>> ";
+		else if (i == 1)
+			return "A>> ";
+		else
+			return "B>> ";
+	}
+
+	public void resv() {
+		int seatClass = selectClass();
+
+		System.out.print("이름>>");
+		String name = scanner.next();
+
+		int num = selectSeatNum();
+
+		seat[seatClass - 1].setSeat(name, num);
+	}
+
+	public void curSeatView() {
+		for (int i = 0; i < seat.length; i++) {
+			System.out.print(classApl(i));
+			seat[i].show();
+		}
+		System.out.println("<<<조회를 완료하였습니다.>>>");
+	}
+
+	public void cancel() {
+		int seatClass = selectClass();
+
+		boolean isTrue = false;
+
+		System.out.print(classApl(seatClass - 1));
+		seat[seatClass - 1].show();
+
+		System.out.print("이름>> ");
+		do {
+			String name = scanner.next();
+			isTrue = false;
+
+			for (int i = 0; i < seat.length; i++) {
+				if (seat[seatClass - 1].getSeat(i).equals(name)) {
+					seat[seatClass - 1].setSeat("---", i + 1);
+					break;
+				} else if (i == seat.length - 1) {
+					System.out.print("다시 입력하세요.>> ");
+					isTrue = true;
+				}
+			}
+		} while (isTrue);
+	}
+
+	public boolean finish() {
+		return false;
+	}
+
+	public void run() {
+		boolean isNotFin = true;
+		System.out.println("명품콘서트홀 예약 시스템입니다.");
+		while (isNotFin) {
+			System.out.print("예약:1, 조회:2, 취소:3, 끝내기:4>>");
+			int mode = scanner.nextInt();
+
+			switch (mode) {
+			case 1:
+				resv();
+				break;
+			case 2:
+				curSeatView();
+				break;
+			case 3:
+				cancel();
+				break;
+			case 4:
+				isNotFin = finish();
+				break;
+			default:
+				System.out.println("해당하는 메뉴가 존재하지 않습니다.");
+				break;
+			}
+		}
+	}
+}
+
+public class Chap12 {
+	public static void main(String[] args) {
+		ReservationSystem resv = new ReservationSystem();
+		resv.run();
+	}
+}

@@ -1,0 +1,16 @@
+package Chap04;
+
+class Rectangle{
+	private int x,y;
+	private int width, height;
+	
+}
+
+public class Chap04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

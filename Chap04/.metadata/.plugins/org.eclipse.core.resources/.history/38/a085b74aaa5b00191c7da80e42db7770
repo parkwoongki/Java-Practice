@@ -1,0 +1,20 @@
+package Chap02;
+
+class Grade{
+	private int sum;
+	
+	Grade(int math, int science, int english){
+		this.sum = (math+science+english)/3;
+	}
+	
+	
+}
+
+public class Chap02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

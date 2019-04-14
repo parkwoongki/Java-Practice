@@ -1,0 +1,67 @@
+package Chap08;
+
+import java.util.Scanner;
+
+class Phone{
+	private String name, phone;
+	
+	public void setInfo(String name, String phone){
+		this.name = name;
+		this.phone = phone;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public String getPhone(){
+		return this.phone;
+	}
+}
+
+class PhoneBook{
+	Phone[] info;
+	
+	public PhoneBook(int count){
+		info = new Phone[count];
+		
+		for (int i = 0; i < info.length; i++) {
+			info[i] = new Phone();
+		}
+	}
+	
+	public void run(){
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		do{
+			System.out.print("검색할 이름>>");
+			String name = scanner.next();
+			
+			switch(name){
+			
+			}
+		}while(true);
+	}
+}
+
+public class Chap08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("인원수>>");
+		int count = scanner.nextInt();
+		
+		PhoneBook book = new PhoneBook(count);
+		
+		for (int i = 0; i < count; i++) {
+			System.out.print("이름과 전화번호(이름과 번호는 빈 칸없이 입력)>>");
+			
+		}
+		
+		scanner.close();
+	}
+
+}

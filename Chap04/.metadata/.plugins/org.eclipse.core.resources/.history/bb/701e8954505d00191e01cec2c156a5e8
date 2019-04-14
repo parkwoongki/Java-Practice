@@ -1,0 +1,64 @@
+package Chap11;
+
+import java.util.Scanner;
+
+class Add {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a + this.b;
+	}
+}
+
+class Sub {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a - this.b;
+	}
+}
+
+class Mul {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a * this.b;
+	}
+}
+
+class Div {
+	private int a, b;
+
+	public void setValue(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int calculate() {
+		return this.a / this.b;
+	}
+}
+
+public class Chap11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+	}
+
+}

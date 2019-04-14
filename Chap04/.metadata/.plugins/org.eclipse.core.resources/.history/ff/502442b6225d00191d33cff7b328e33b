@@ -1,0 +1,76 @@
+package Chap07;
+
+import java.util.Scanner;
+
+class Day {
+	private String work;
+
+	public void set(String work) {
+		this.work = work;
+	}
+
+	public String get() {
+		return work;
+	}
+
+	public void show() {
+		if (work == null)
+			System.out.println("없습니다.");
+		else
+			System.out.println(work + "입니다.");
+	}
+}
+
+class MonthSchedule {
+	private int day;
+	private Day[] todo = new Day[day];
+	
+	public MonthSchedule(int day) {
+		this.day = day;
+		System.out.println("이번달 스케쥴 관리 프로그램.");
+	}
+
+	public void input() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("날짜(1~30)?");
+		int day = scanner.nextInt();
+	}
+
+	public void view() {
+		
+	}
+
+	public void finish() {
+		
+	}
+
+	public void run() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("할일(입력:1, 보기:2, 끝내기:3)>>");
+		int option = scanner.nextInt();
+		switch (option) {
+		case 1:
+			input();
+			break;
+		case 2:
+			view();
+			break;
+		case 3:
+			finish();
+			break;
+		default:
+			break;
+		}
+		scanner.close();
+	}
+}
+
+public class Chap07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MonthSchedule april = new MonthSchedule(30);
+		april.run();
+	}
+
+}

@@ -1,0 +1,26 @@
+package Chap04;
+
+class Rectangle{
+	private int x,y;
+	private int width, height;
+	
+	public Rectangle(int x, int y, int width, int height){
+		this.x=x;
+		this.y=y;
+		this.width = width;
+		this.height= height;
+	}
+	
+	int square(){
+		return (this.width)*(this.height);
+	}
+}
+
+public class Chap04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

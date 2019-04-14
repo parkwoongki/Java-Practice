@@ -1,0 +1,59 @@
+package Chap12;
+
+class Seat {
+	String[] seat = { "---", "---", "---", "---", "---", "---", "---", "---",
+			"---", "---" };
+
+	public void setSeat(String name, int num) {
+		seat[num - 1] = name;
+	}
+
+	public void show() {
+		for (int i = 0; i < seat.length; i++) {
+			System.out.print(seat[i] + " ");
+		}
+	}
+}
+
+class ReservationSystem {
+	public void resv() {
+
+	}
+
+	public void inquiry() {
+
+	}
+
+	public void cancel() {
+
+	}
+
+	public void finish() {
+
+	}
+
+	public void run() {
+		System.out.println("명품콘서트홀 예약 시스템입니다.");
+		while (true) {
+			System.out.print("예약:1, 조회:2, 취소:3, 끝내기:4>>");
+		}
+	}
+}
+
+public class Chap12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// 공연은 하루에 한번
+		// 좌석 s a b 석
+		// 예약 시스템 : 클래스 - 예약, 조회, 취소, 끝내기
+		// 예약은 한자리만 좌석타입, 번호 전달
+
+		// 좌석 : 클래스
+		// 예약취소는 이름을 받아와서 반복문으로 이름 비교후 있으면 --- 로 다시 넣기
+		// 없는 이름, 없는 번호, 잘못 취소는 다시 치케 반복문 처리
+
+	}
+
+}

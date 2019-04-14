@@ -1,0 +1,17 @@
+package Chap03;
+
+class Song{
+	private String title;
+	private String artist;
+	private int year;
+	private String country;
+}
+
+public class Chap03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
