@@ -1,0 +1,13 @@
+package Prob05;
+
+import java.util.Calendar;
+
+public class Prob05 {
+
+	public static void main(String[] args) {
+		System.out.println("현재 시간은 "+Calendar.HOUR_OF_DAY+"시 "+Calendar.MINUTE+"분입니다.");
+		
+//		if(date.g)
+	}
+
+}

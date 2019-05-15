@@ -1,0 +1,67 @@
+package Prob06;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+class GameOf10 {
+	Scanner scanner = new Scanner(System.in);
+
+	public GameOf10() {
+		// TODO Auto-generated constructor stub
+		System.out.println("1초에 가까운 사람이 이기는 게임입니다.");
+	}
+
+	public int Second() {
+		Calendar Second = Calendar.getInstance();
+		return Second.get(Calendar.SECOND);
+	}
+
+	public int turn(int n) {
+		int first;
+		int after;
+
+		System.out.println("Player" + n + " 시작 <Enter>키>>");
+		scanner.nextLine();
+		first = Second();
+		System.out.println("현재 초 시간 = " + first);
+
+		System.out.println("10초 예상 후 <Enter>키>>");
+		scanner.nextLine();
+		after = Second();
+		
+		System.out.println("현재 초 시간 = " + after);
+
+		if (after >= first)
+			return Math.abs(after - first);
+		else
+			return Math.abs((after + 60) - first);
+
+	}
+
+	public void run() {
+		int[] result = new int[2];
+
+		result[0] = turn(0);
+		result[1] = turn(1);
+
+		System.out.print("Player" + 1 + "의 결과 " + result[0] + ", " + "Player"
+				+ 2 + "의 결과 " + result[1] + ", ");
+		if (Math.abs(10 - result[0]) < Math.abs(10 - result[1]))
+			System.out.println("Player" + 1 + "의 승리");
+		else if (Math.abs(10 - result[0]) > Math.abs(10 - result[1]))
+			System.out.println("Player" + 2 + "의 승리");
+		else
+			System.out.println("동점입니다.");
+	}
+}
+
+public class Prob06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GameOf10 game = new GameOf10();
+
+		game.run();
+	}
+
+}

@@ -1,0 +1,52 @@
+package GameProcess;
+
+import java.util.Scanner;
+import PersonInfo.*;
+
+public class Gambling {
+	Scanner scanner = new Scanner(System.in);
+	private Person[] person;
+	private int i = 0;
+
+	public Gambling(Person[] person) {
+		// TODO Auto-generated constructor stub
+		this.person = person;
+	}
+
+	private boolean randomProcess() {
+		int[] randNum = new int[3];
+
+		System.out.print("\t");
+		for (int i = 0; i < 3; i++) {
+			randNum[i] = (int) (Math.random() * 3 + 1);
+
+			System.out.print(randNum[i] + "\t");
+		}
+
+		if (randNum[0] == randNum[1] && randNum[1] == randNum[2]
+				&& randNum[2] == randNum[0]) {
+			System.out.println(person[i].getName() + "님이 이겼습니다!");
+			return true;
+		} else {
+			System.out.println("아쉽군요!");
+			return false;
+		}
+	}
+
+	public void run() {
+		while (true) {
+			try {
+				System.out.print("[" + person[i].getName() + "]:<Enter>");
+				scanner.nextLine();
+
+				if (randomProcess())
+					break;
+
+				i++;
+			} catch (ArrayIndexOutOfBoundsException e) {
+				i = 0;
+				continue;
+			}
+		}
+	}
+}

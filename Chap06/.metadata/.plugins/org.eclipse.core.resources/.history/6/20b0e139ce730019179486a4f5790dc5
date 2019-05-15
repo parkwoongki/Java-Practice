@@ -1,0 +1,50 @@
+package Prob09;
+
+import java.util.Scanner;
+
+public class Prob09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		String str[] = { "가위", "바위", "보" };
+		String vs[] = { "보", "가위", "바위" };
+		int user;
+
+		while (true) {
+			int n = (int) (Math.random() * 3);
+			String computer = null;
+			for (int i = 0; i < 3; i++) {
+				if (str[n].equals(str[i])) {
+					computer = str[i];
+					break;
+				}
+			}
+
+			System.out.print("웅기[가위(1), 바위(2), 보(3), 끝내기(4)]>>");
+			user = scanner.nextInt();
+
+			if (user == 4)
+				break;
+
+			if (vs[user - 1].equals(computer))
+				System.out.println("웅기("+ vs[user - 1] + ") : 컴퓨터(" + computer + ") 비겼습니다." );
+				System.out.println("computer : " + computer + ", user : "
+						+ vs[user - 1] + ", 비겼습니다.");
+			else {
+				for (int i = 0; i < str.length; i++) {
+					if (vs[user - 1].equals(str[i]))
+						if (computer.equals(vs[i]))
+							System.out.println("computer : " + computer
+									+ ", user : " + vs[user - 1] + ", 이겼습니다.");
+						else
+							System.out.println("computer : " + computer
+									+ ", user : " + vs[user - 1] + ", 졌습니다.");
+				}
+			}
+		}
+
+		scanner.close();
+	}
+
+}

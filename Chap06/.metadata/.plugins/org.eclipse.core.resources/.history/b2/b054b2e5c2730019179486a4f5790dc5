@@ -1,0 +1,46 @@
+package Prob06;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+class GameOf10 {
+	Calendar cal = Calendar.getInstance();
+	Scanner scanner = new Scanner(System.in);
+
+	public GameOf10() {
+		// TODO Auto-generated constructor stub
+		System.out.println("1초에 가까운 사람이 이기는 게임입니다.");
+	}
+
+	public int turn(int n) {
+		int first;
+		int after;
+		
+		System.out.println("Player" + n + " 시작 <Enter>키>>");
+		scanner.nextLine();
+		first = cal.get(Calendar.SECOND);
+		System.out.println("10초 예상 후 <Enter>키>>");
+		scanner.nextLine();
+		after = cal.get(Calendar.SECOND);
+		
+		return Math.abs(after - first);
+	}
+
+	public void run() {
+		int [] result = new int[2];
+		
+		result[0] = turn(0);
+		result[1] = turn(1);
+	}
+}
+
+public class Prob06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GameOf10 game = new GameOf10();
+
+		game.run();
+	}
+
+}

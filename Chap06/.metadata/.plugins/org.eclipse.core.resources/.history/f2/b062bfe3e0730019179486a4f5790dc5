@@ -1,0 +1,19 @@
+package Prob11;
+
+import java.util.Scanner;
+
+public class Prob11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.print(">>");
+		String s = scanner.nextLine();
+		
+		StringBuffer sb = new StringBuffer(s);
+		System.out.println(sb);
+		
+		scanner.close();
+	}
+
+}

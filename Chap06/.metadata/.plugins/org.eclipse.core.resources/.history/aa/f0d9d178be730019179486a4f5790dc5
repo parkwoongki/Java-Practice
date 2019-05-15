@@ -1,0 +1,13 @@
+package Prob05;
+
+import java.util.Calendar;
+
+public class Prob05 {
+
+	public static void main(String[] args) {
+		Calendar date = Calendar.getInstance();
+		
+		System.out.println(date.get(Calendar.HOUR_OF_DAY) + date.get(Calendar.MINUTE)));
+	}
+
+}

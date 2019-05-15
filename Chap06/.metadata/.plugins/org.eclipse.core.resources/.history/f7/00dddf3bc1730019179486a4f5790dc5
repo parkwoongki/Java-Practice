@@ -1,0 +1,27 @@
+package Prob06;
+
+import java.util.Calendar;
+
+class GameOf10 {
+	Calendar cal = Calendar.getInstance();
+	
+	public GameOf10() {
+		// TODO Auto-generated constructor stub
+		System.out.println("1초에 가까운 사람이 이기는 게임입니다.");
+	}
+
+	void run() {
+		
+	}
+}
+
+public class Prob06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GameOf10 game = new GameOf10();
+
+		game.run();
+	}
+
+}

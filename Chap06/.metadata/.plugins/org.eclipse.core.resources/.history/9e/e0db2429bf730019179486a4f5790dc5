@@ -1,0 +1,17 @@
+package Prob05;
+
+import java.util.Calendar;
+
+public class Prob05 {
+
+	public static void main(String[] args) {
+		Calendar date = Calendar.getInstance();
+
+		System.out.println("현재 시간은 " + date.get(Calendar.HOUR_OF_DAY) + "시  "
+				+ date.get(Calendar.MINUTE) + "분입니다.");
+		
+		if(date.get(Calendar.HOUR_OF_DAY)>=4 && date.get(Calendar.HOUR_OF_DAY)<=12)
+			System.out.println("Good Morning");
+	}
+
+}

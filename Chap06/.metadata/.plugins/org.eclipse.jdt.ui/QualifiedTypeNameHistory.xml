@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Prob01.MyPoint"/>
+<fullyQualifiedTypeName name="derived.Circle"/>
+<fullyQualifiedTypeName name="base.Shape"/>
+<fullyQualifiedTypeName name="java.time.DayOfWeek"/>
+<fullyQualifiedTypeName name="Prob06.GameOf10"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="Prob10.Gambling"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="PersonInfo.Person"/>
+<fullyQualifiedTypeName name="GameProcess.Gambling"/>
+<fullyQualifiedTypeName name="GameProcess.GameOf10"/>
+</qualifiedTypeNameHistroy>
