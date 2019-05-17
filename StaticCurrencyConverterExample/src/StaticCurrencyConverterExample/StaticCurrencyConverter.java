@@ -23,6 +23,7 @@ public class StaticCurrencyConverter {
 
 		System.out.println("환율(1달러)>> ");
 		double rate = scanner.nextDouble();
+
 		StaticCurrencyConverter.setRate(rate);
 
 		System.out.println("백만원은 $" + StaticCurrencyConverter.toDollar(1000000)
