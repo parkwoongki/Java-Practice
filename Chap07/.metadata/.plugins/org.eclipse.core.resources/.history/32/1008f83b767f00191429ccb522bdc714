@@ -1,0 +1,133 @@
+package Prob11_2;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+import java.util.Set;
+
+class Nation {
+	private String country;
+	private String capital;
+
+	public Nation(String country, String capital) {
+		// TODO Auto-generated constructor stub
+		this.country = country;
+		this.capital = capital;
+	}
+
+	public String getCapital() {
+		return this.capital;
+	}
+
+	public String getCountry() {
+		return this.country;
+	}
+}
+
+class GameofNation {
+	HashMap<String, String> nationMap = new HashMap<>();
+	Scanner scanner = new Scanner(System.in);
+
+	public GameofNation() {
+		// TODO Auto-generated constructor stub
+		nationMap.put("독일", "베를린");
+		nationMap.put("멕시코", "멕시코시티");
+		nationMap.put("이탈리아", "로마");
+		nationMap.put("영국", "런던");
+		nationMap.put("중국", "베이징");
+		nationMap.put("북한", "평양");
+		nationMap.put("캐나다", "오타와");
+		nationMap.put("태국", "방콕");
+		nationMap.put("그리스", "아테네");
+	}
+
+	/* 나라 수도 추가 */
+	private void insert() {
+		System.out.println("현재 " + nationMap.size() + "개 나라와 수도가 입력되어 있습니다.");
+
+		while (true) {
+			System.out.print("나라와 수도 입력" + (nationMap.size() + 1) + ">> ");
+			String country = scanner.next();
+			if (country.equals("그만"))
+				break;
+			String capital = scanner.next();
+
+			Set<String> keys = nationMap.keySet();
+			Iterator<String> it = keys.iterator();
+
+			if (nationMap.containsKey(country)) {
+				System.out.println(country + "는 이미 있습니다!");
+				continue;
+			}
+
+			nationMap.put(country, capital);
+		}
+	}
+
+	/* 퀴즈 */
+	private void quiz() {
+		while (true) {
+			Set<String> keys = nationMap.keySet();
+			Iterator<String> it = keys.iterator();
+
+			while (true) {
+				try {
+					String key = it.next();
+					System.out.println(key + "의 수도는? ");
+					String capital = scanner.next();
+					if (capital.equals("그만"))
+						break;
+
+					if (capital.equals(nationMap.get(key)))
+						System.out.println("정답!!");
+					else
+						System.out.println("아닙니다!!");
+				} catch (NoSuchElementException e) {
+					it = keys.iterator();
+					continue;
+				}
+			}
+		}
+	}
+
+	/* 끝 */
+	private boolean finish() {
+		return true;
+	}
+
+	/* 구동 */
+	public void run() {
+		System.out.println("**** 수도 맞추기 게임을 시작합니다. ****");
+		while (true) {
+			System.out.print("입력:1, 퀴즈:2, 종료:3>> ");
+			int n = scanner.nextInt();
+			boolean isFinish = false;
+
+			switch (n) {
+			case 1:
+				insert();
+				break;
+			case 2:
+				quiz();
+				break;
+			default:
+				isFinish = finish();
+				break;
+			}
+
+			if (isFinish)
+				break;
+		}
+	}
+}
+
+public class Prob11_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GameofNation gm = new GameofNation();
+
+		gm.run();
+	}
+}

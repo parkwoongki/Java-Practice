@@ -1,0 +1,17 @@
+package Prob08;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Prob08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<String, Integer> clientMap = new HashMap<String, Integer>();
+		Scanner scanner = new Scanner(System.in);
+
+		scanner.close();
+
+	}
+
+}

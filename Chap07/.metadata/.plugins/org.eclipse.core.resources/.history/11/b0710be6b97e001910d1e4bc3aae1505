@@ -1,0 +1,84 @@
+package Prob05;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+
+class Student {
+	private String name;
+	private String major;
+	private int snum;
+	private double grade;
+
+	public Student(String name, String major, int snum, double grade) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.major = major;
+		this.snum = snum;
+		this.grade = grade;
+	}
+
+	public double getGrade() {
+		return this.grade;
+	}
+
+	public String getMajor() {
+		return this.major;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public int getSnum() {
+		return this.snum;
+	}
+}
+
+public class Prob05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Student> s = new ArrayList<Student>(4);
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("학생 이름, 학과, 학번, 학점평균 입력하세요.");
+		for (int i = 0; i < s.size(); i++) {
+			String name = scanner.next();
+			String major = scanner.next();
+			int snum = scanner.nextInt();
+			double grade = scanner.nextDouble();
+			s.add(new Student(name, major, snum, grade));
+		}
+
+		for (int i = 0; i < s.size(); i++) {
+			System.out.println("------------------------");
+			System.out.print("이름 : " + s.get(i).getName());
+			System.out.print("학과 : " + s.get(i).getMajor());
+			System.out.print("학번 : " + s.get(i).getSnum());
+			System.out.print("학점평균 : " + s.get(i).getGrade());
+		}
+
+		System.out.println("------------------------");
+
+		while (true) {
+			System.out.print("학생 이름 >> ");
+			String name = scanner.next();
+			if (name.equals("그만"))
+				break;
+			Iterator<Student> it = s.iterator();
+			while (it.hasNext()) {
+				Student stu;
+				if (!name.equals(it.next().getName()))
+					continue;
+				else
+					stu = it.next();
+				System.out.print(stu.getName() + ", " + stu.getMajor() + ", "
+						+ stu.getSnum() + ", " + stu.getGrade()+"\n");
+			}
+
+		}
+		scanner.close();
+	}
+}

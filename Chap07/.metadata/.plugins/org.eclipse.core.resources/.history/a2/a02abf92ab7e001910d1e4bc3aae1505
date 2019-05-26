@@ -1,0 +1,28 @@
+package Prob02;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Prob02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Character> a = new ArrayList<Character>();
+		Scanner scanner = new Scanner(System.in);
+		
+		for (int i = 'F'; i >= 'A'; i--) {
+			a.add((char)i);
+		}
+		Iterator<Character> i = a.iterator();
+		
+		int m = 5;
+		while (i.hasNext()) {
+			System.out.println(a);
+		}
+		
+
+		scanner.close();
+	}
+
+}

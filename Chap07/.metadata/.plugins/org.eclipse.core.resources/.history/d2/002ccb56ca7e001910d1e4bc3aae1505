@@ -1,0 +1,10 @@
+package Prob07;
+
+public class Prob07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("미래장학금관리시스템입니다.");
+	}
+
+}

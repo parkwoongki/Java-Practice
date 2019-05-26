@@ -1,0 +1,65 @@
+package Prob05;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+	private String name;
+	private String major;
+	private int snum;
+	private double grade;
+
+	public Student(String name, String major, int snum, double grade) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.major = major;
+		this.snum = snum;
+		this.grade = grade;
+	}
+
+	public double getGrade() {
+		return this.grade;
+	}
+
+	public String getMajor() {
+		return this.major;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public int getSnum() {
+		return this.snum;
+	}
+}
+
+public class Prob05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student[] stu_info = new Student[4];
+		ArrayList<Student> s = new ArrayList<Student>();
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("학생 이름, 학과, 학번, 학점평균 입력하세요.");
+		for (int i = 0; i < stu_info.length; i++) {
+			String name = scanner.next();
+			String major = scanner.next();
+			int snum = scanner.nextInt();
+			double grade = scanner.nextDouble();
+			stu_info[i] = new Student(name, major, snum, grade);
+		}
+		
+		for (int i = 0; i < stu_info.length; i++) {
+			System.out.print("이름 : " + stu_info[i].getName());
+			System.out.print("학과 : " + stu_info[i].getMajor());
+			System.out.print("학번 : " + stu_info[i].getSnum());
+			System.out.print("학점평균 : " + stu_info[i].getGrade());
+			System.out.println("------------------------");
+		}
+		
+		scanner.close();
+	}
+
+}

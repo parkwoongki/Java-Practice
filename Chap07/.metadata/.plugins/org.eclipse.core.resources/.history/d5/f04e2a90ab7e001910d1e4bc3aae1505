@@ -1,0 +1,18 @@
+package Prob02;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Prob02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Character> a = new ArrayList<Character>();
+		Scanner scanner = new Scanner(System.in);
+		
+		a.add('A');
+
+		scanner.close();
+	}
+
+}

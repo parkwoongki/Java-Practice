@@ -1,0 +1,15 @@
+package Prob09;
+
+interface IStack<T>{
+	T pop();
+	boolean push(T ob);
+}
+
+public class Prob09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package Prob03;
+
+import java.util.HashMap;
+
+public class Prob03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<String, Integer> nations = new HashMap<String, Integer>();
+		
+		System.out.println("나라 이름과 인구를 10개 입력하세요.(예: Korea 5000)");
+	}
+
+}

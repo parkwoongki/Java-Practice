@@ -1,0 +1,13 @@
+package Prob03;
+
+import java.util.HashMap;
+
+public class Prob03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<String, Integer> nations = new HashMap<String, Integer>();
+				
+	}
+
+}

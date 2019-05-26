@@ -1,0 +1,20 @@
+package Prob04;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Prob04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Vector<Integer> v = new Vector<Integer>();
+		Scanner scanner = new Scanner(System.in);
+
+		while (true) {
+			int rain = scanner.nextInt();
+		}
+
+		scanner.close();
+	}
+
+}

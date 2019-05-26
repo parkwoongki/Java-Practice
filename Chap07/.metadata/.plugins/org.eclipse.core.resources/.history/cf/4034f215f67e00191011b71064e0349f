@@ -1,0 +1,121 @@
+package Prob11;
+
+import java.util.Iterator;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Vector;
+
+class Nation {
+	private String country;
+	private String capital;
+
+	public Nation(String country, String capital) {
+		// TODO Auto-generated constructor stub
+		this.country = country;
+		this.capital = capital;
+	}
+
+	public String getCapital() {
+		return this.capital;
+	}
+
+	public String getCountry() {
+		return this.country;
+	}
+}
+
+class GameofNation {
+	Vector<Nation> v = new Vector<>();
+	Scanner scanner = new Scanner(System.in);
+
+	public GameofNation() {
+		// TODO Auto-generated constructor stub
+		v.add(new Nation("독일", "베를린"));
+		v.add(new Nation("멕시코", "멕시코시티"));
+		v.add(new Nation("이탈리아", "로마"));
+		v.add(new Nation("영국", "로마"));
+		v.add(new Nation("중국", "베이징"));
+		v.add(new Nation("북한", "평양"));
+		v.add(new Nation("캐나다", "오타와"));
+		v.add(new Nation("태국", "방콕"));
+		v.add(new Nation("헝가리", "부다페스트"));
+	}
+
+	/* 나라 수도 추가 */
+	private void insert() {
+		System.out.println("현재 " + v.size() + "개 나라와 수도가 입력되어 있습니다.");
+
+		while (true) {
+			System.out.print("나라와 수도 입력" + (v.size() + 1) + ">> ");
+			String country = scanner.next();
+			if (country.equals("그만"))
+				break;
+			String capital = scanner.next();
+
+			Iterator<Nation> it = v.iterator();
+			boolean isSame = false;
+
+			while (it.hasNext()) {
+				if (country.equals(it.next().getCountry())) {
+					System.out.println(country + "는 이미 있습니다!");
+					isSame = true;
+					break;
+				}
+			}
+			if (!isSame)
+				v.add(new Nation(country, capital));
+		}
+	}
+
+	/* 퀴즈 */
+	private void quiz() {
+		while (true) {
+			int randIndex = (int) (Math.random() * v.size());
+			Nation prob = v.get(randIndex);
+
+			System.out.println(prob.getCountry() + "의 수도는? ");
+
+			String capital = scanner.next();
+			if (capital.equals(prob.getCapital()))
+				System.out.println("정답!!");
+			else
+				System.out.println("아닙니다!!");
+		}
+	}
+
+	/* 끝 */
+	private boolean finish() {
+		return true;
+	}
+
+	/* 구동 */
+	public void run() {
+		System.out.println("**** 수도 맞추기 게임을 시작합니다. ****");
+		while (true) {
+			System.out.print("입력:1, 퀴즈:2, 종료:3>> ");
+			int n = scanner.nextInt();
+
+			switch (n) {
+			case 1:
+				insert();
+				break;
+			case 2:
+				quiz();
+				break;
+			default:
+				if (finish())
+					break;
+			}
+		}
+	}
+}
+
+public class Prob11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GameofNation gm = new GameofNation();
+
+		gm.run();
+	}
+}

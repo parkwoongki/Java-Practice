@@ -1,0 +1,44 @@
+package Prob09;
+
+import java.util.Vector;
+
+interface IStack<T> {
+	T pop();
+
+	boolean push(T ob);
+}
+
+class MyStack<T> implements IStack<T> {
+	Vector<Integer> v = new Vector<>();
+	@Override
+	public T pop() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean push(Object ob) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
+
+public class Prob09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		IStack<Integer> stack = new MyStack<Integer>();
+
+		for (int i = 0; i < 10; i++)
+			stack.push(i);
+
+		while (true) {
+			Integer n = stack.pop();
+			if (n == null)
+				break;
+			System.out.println(n + " ");
+		}
+	}
+
+}
