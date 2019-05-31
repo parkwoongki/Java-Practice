@@ -8,7 +8,7 @@ public class FileReaderEx {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		FileReader fin = null;
-
+		
 		try {
 			fin = new FileReader("c:\\windows\\system.ini");
 			int c;
