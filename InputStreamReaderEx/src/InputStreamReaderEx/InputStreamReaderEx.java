@@ -17,10 +17,10 @@ public class InputStreamReaderEx {
 			int c;
 
 			System.out.println("인코딩 문자 집합은 " + in.getEncoding());
-
 			while ((c = in.read()) != -1) {
 				System.out.print((char) c);
 			}
+			
 			in.close();
 			fin.close();
 		} catch (IOException e) {
