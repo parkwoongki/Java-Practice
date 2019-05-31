@@ -1,0 +1,38 @@
+package Prob11;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+import java.util.Vector;
+
+public class Prob11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int c = 0;
+		String tmp = "";
+		Scanner scanner = new Scanner(System.in);
+		Vector<String> phoneV = new Vertor<String>();
+
+		try {
+			FileReader fin = new FileReader("c:\\Temp\\phone.txt");
+
+			while ((c = fin.read()) != -1) {
+				tmp += (char) c;
+				if ((char) c == '\n') {
+					StringTokenizer st = new StringTokenizer(tmp, " ");
+					phoneMap.put(st.nextToken(), st.nextToken());
+					tmp = "";
+				}
+			}
+
+			fin.close();
+		} catch (IOException e) {
+			System.out.println("입출력 오류");
+		}
+
+		scanner.close();
+	}
+
+}

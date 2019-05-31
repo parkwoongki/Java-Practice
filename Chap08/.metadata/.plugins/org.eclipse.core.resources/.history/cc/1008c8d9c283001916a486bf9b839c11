@@ -1,0 +1,28 @@
+package Prob08;
+
+import java.io.File;
+
+public class Prob08 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f = new File("c:\\");
+		File tmp = new File("");
+		File[] subfiles = f.listFiles();
+
+		for (int i = 1; i < subfiles.length; i++) {
+
+			// System.out.println("가장 큰 파일은 " + subfiles[i-1].getPath() + " "
+			// + subfiles[i-1].length());
+			if (subfiles[i].isDirectory())
+				continue;
+			if (subfiles[i - 1].length() > subfiles[i].length()) {
+				System.out.println("가장 큰 파일은 " + subfiles[i - 1].getPath()
+						+ " " + subfiles[i - 1].length());
+				tmp = subfiles[i - 1];
+			}
+		}
+		System.out.println("\n가장 큰 파일은 " + tmp.getPath() + " " + tmp.length());
+	}
+
+}

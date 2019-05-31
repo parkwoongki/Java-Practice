@@ -1,0 +1,31 @@
+package Prob12;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Prob12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		FileWriter fout;
+int c;		System.out
+				.println("전체 경로명이 아닌 파일 이름만 입력하는 경우, 파일은 프로젝트 폴더에 있어야 합니다.\n대상 파일명 입력>>");
+		String path = scanner.next();
+
+		try {
+			fout = new FileWriter(path);
+			
+			while()
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+
+		scanner.close();
+
+	}
+}

@@ -1,0 +1,37 @@
+package Prob10;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
+
+public class Prob10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int c=0;
+		String tmp = "";
+		Map<String, String> phoneMap = new HashMap<String, String>();
+		
+		try {
+			FileReader fin = new FileReader("c:\\Temp\\phone.txt");
+			
+			while(true){
+				tmp += (char)c;
+				if((char)c == '\n'){
+					StringTokenizer st = new StringTokenizer(tmp, " \n");
+					String name = st.nextToken();
+					String phone = st.nextToken();
+					phoneMap.put(st[0], st[1])
+				}
+				if((c = fin.read())!=-1)
+					break;
+			}
+			
+			fin.close();
+		} catch (IOException e) {
+			System.out.println("입출력 오류");
+		}
+	}
+}

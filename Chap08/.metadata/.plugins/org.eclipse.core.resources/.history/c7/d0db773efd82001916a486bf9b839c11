@@ -1,0 +1,17 @@
+package Prob05;
+
+import java.util.Scanner;
+
+public class Prob05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		String f1, f2;
+		
+		System.out.println("전체 경로명이 아닌 파일 이름만 입력하는 경우, 파일은 프로젝트 폴더에 있어야 합니다.");
+		
+		
+	}
+
+}

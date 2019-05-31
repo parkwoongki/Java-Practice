@@ -1,0 +1,31 @@
+package Prob10;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+public class Prob10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int c=0;
+		String tmp = null;
+		
+		try {
+			FileReader fin = new FileReader("c:\\Temp\\phone.txt");
+			
+			while(true){
+				tmp += (char)c;
+				if((char)c == '\n'){
+					StringTokenizer st = new StringTokenizer(tmp, " \n");
+				}
+				if((c = fin.read())!=-1)
+					break;
+			}
+			
+			fin.close();
+		} catch (IOException e) {
+			System.out.println("입출력 오류");
+		}
+	}
+}

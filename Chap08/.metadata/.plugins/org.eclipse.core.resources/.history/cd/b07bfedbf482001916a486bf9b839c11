@@ -1,0 +1,22 @@
+package Prob01;
+
+import java.util.Scanner;
+
+public class Prob01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("전화번호 입력 프로그램입니다.");
+		while(true){
+			System.out.print("이름 전화번호 >> ");
+			String name = scanner.next();
+			String phone = scanner.next();
+			if()
+		}
+
+		scanner.close();
+	}
+
+}

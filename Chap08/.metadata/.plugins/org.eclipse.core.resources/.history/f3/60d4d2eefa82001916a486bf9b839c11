@@ -1,0 +1,32 @@
+package Prob04;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Prob04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileReader fin = null;
+		String path = "c:\\windows\\system.ini";
+		int c = 0;
+		int line_count = 1;
+
+		try {
+			fin = new FileReader(path);
+
+			System.out.println(path + " 파일을 읽어 출력합니다.");
+
+			System.out.print(line_count++ + ": ");
+			while ((c = fin.read()) != -1) {
+				System.out.print((char) c);
+				if ((char) c == '\n')
+					System.out.print(line_count++ + ": ");
+
+			}
+		} catch (IOException e) {
+			System.out.println("입출력 오류");
+		}
+	}
+
+}

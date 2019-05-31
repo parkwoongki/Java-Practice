@@ -1,0 +1,17 @@
+package Prob10;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Prob10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			FileReader fin = new FileReader("c:\\Temp\\phone.txt");
+		} catch (IOException e) {
+			System.out.println("입출력 오류");
+		}
+	}
+
+}

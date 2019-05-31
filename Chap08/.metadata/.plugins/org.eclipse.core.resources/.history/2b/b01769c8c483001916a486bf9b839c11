@@ -1,0 +1,19 @@
+package Prob09;
+
+import java.io.File;
+
+public class Prob09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f = new File("c:\\temp2");
+		File[] subfiles = f.listFiles();
+
+		for (int i = 0; i < subfiles.length; i++) {
+			String tmp = subfiles[i].getName();
+			if (tmp.lastIndexOf(".txt") != -1)
+				;
+		}
+	}
+
+}

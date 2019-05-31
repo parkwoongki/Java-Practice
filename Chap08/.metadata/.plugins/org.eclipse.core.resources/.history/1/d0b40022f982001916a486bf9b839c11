@@ -1,0 +1,21 @@
+package Prob04;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Prob04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileReader fin = null;
+
+		try {
+			fin = new FileReader("c:\\windows\\system.ini");
+			
+			System.out.println(fin.getClass() + "파일을 읽어 출력합니다.");
+		} catch (IOException e) {
+			System.out.println("입출력 오류");
+		}
+	}
+
+}
