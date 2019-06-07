@@ -1,0 +1,69 @@
+package Prob07;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class NorthPanel extends JPanel {
+	private static final long serialVersionUID = -3251694701710894387L;
+
+	public NorthPanel() {
+		// TODO Auto-generated constructor stub
+
+	}
+}
+
+class CenterPanel extends JPanel {
+	public CenterPanel() {
+		// TODO Auto-generated constructor stub
+		GridLayout grid = new GridLayout(4, 4, 5, 5);
+		setLayout(grid);
+		for (int i = 0; i < 9; i++) {
+			add(new JButton(Integer.toString(i)));
+		}
+		add(new JButton("CE"));
+		add(new JButton("°è»ê"));
+
+	}
+}
+
+class SouthPanel extends JPanel {
+	public SouthPanel() {
+		// TODO Auto-generated constructor stub
+
+	}
+}
+
+public class Prob07 extends JFrame {
+	private static final long serialVersionUID = -3978967833787824218L;
+
+	public Prob07() {
+		// TODO Auto-generated constructor stub
+		setTitle("BorderLayout Practice");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		Container c = getContentPane();
+
+		c.setLayout(new BorderLayout());
+
+		c.add(new NorthPanel(), BorderLayout.NORTH);
+
+		c.add(new CenterPanel(), BorderLayout.CENTER);
+
+		c.add(new SouthPanel(), BorderLayout.SOUTH);
+
+		setSize(350, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob07();
+	}
+
+}

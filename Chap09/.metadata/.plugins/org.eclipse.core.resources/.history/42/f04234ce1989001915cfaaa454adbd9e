@@ -1,0 +1,50 @@
+package Prob05;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Prob05 extends JFrame {
+	private static final long serialVersionUID = 584064860902718275L;
+
+	public Prob05() {
+		// TODO Auto-generated constructor stub
+		setTitle("Ten Color Buttons Frame");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		GridLayout grid = new GridLayout(4, 4);
+
+		Container c = getContentPane();
+		c.setLayout(grid);
+
+		c.add(new JLabel("0")).setBackground(Color.RED);
+		c.add(new JLabel("1")).setBackground(Color.ORANGE);
+		c.add(new JLabel("2")).setBackground(Color.YELLOW);
+		c.add(new JLabel("3")).setBackground(Color.GREEN);
+		c.add(new JLabel("4")).setBackground(Color.CYAN);
+		c.add(new JLabel("5")).setBackground(Color.BLUE);
+		c.add(new JLabel("6")).setBackground(Color.MAGENTA);
+		c.add(new JLabel("7")).setBackground(Color.DARK_GRAY);
+		c.add(new JLabel("8")).setBackground(Color.PINK);
+		c.add(new JLabel("9")).setBackground(Color.LIGHT_GRAY);
+		c.add(new JLabel("10")).setBackground(Color.WHITE);
+		c.add(new JLabel("11")).setBackground(Color.BLACK);
+		c.add(new JLabel("12")).setBackground(Color.BLACK);
+		c.add(new JLabel("13")).setBackground(Color.ORANGE);
+		c.add(new JLabel("14")).setBackground(Color.BLUE);
+		c.add(new JLabel("15")).setBackground(Color.MAGENTA);
+
+		setSize(500, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob05();
+	}
+
+}

@@ -1,0 +1,56 @@
+package Prob07;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class NorthPanel {
+
+}
+
+public class Prob07 extends JFrame {
+	private static final long serialVersionUID = -3978967833787824218L;
+
+	public Prob07() {
+		// TODO Auto-generated constructor stub
+		setTitle("BorderLayout Practice");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		Container c = getContentPane();
+
+		JPanel input = new JPanel();
+
+		JPanel buttons = new JPanel();
+		GridLayout grid = new GridLayout(4, 4);
+		grid.setVgap(5);
+		Container b = getContentPane();
+		setLayout(grid);
+		for (int i = 0; i < 16; i++) {
+			buttons.add(new Button(Integer.toString(i)));
+		}
+
+		JPanel result = new JPanel();
+
+		c.setLayout(new BorderLayout());
+
+		c.add(input, BorderLayout.NORTH);
+
+		c.add(buttons, BorderLayout.CENTER);
+
+		c.add(result, BorderLayout.SOUTH);
+
+		setSize(350, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob07();
+	}
+
+}

@@ -1,0 +1,37 @@
+package Prob03;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Prob03 extends JFrame {
+	private static final long serialVersionUID = -7893407115719664495L;
+
+	public Prob03() {
+		// TODO Auto-generated constructor stub
+		setTitle("Ten Color Buttons Frame");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		GridLayout grid = new GridLayout(1, 10);
+		
+		Container c = new Container();
+		c.setLayout(grid);
+		c.add(new JTextField(0));	
+		
+		for (int i = 0; i < 10; i++) {
+			c.add(new JTextField(i));	
+		}
+
+		setSize(400, 200);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob03();
+	}
+
+}

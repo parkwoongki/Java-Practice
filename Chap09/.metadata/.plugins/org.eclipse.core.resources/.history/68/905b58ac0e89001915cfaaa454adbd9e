@@ -1,0 +1,19 @@
+package Prob03;
+
+import javax.swing.JFrame;
+
+public class Prob03 extends JFrame {
+	private static final long serialVersionUID = -7893407115719664495L;
+
+	public Prob03() {
+		// TODO Auto-generated constructor stub
+		setTitle("Ten Color Buttons Frame");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob03();
+	}
+
+}

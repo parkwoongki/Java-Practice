@@ -1,0 +1,15 @@
+package Prob04;
+
+import javax.swing.JButton;
+
+public class Prob04 extends JButton {
+	public Prob04() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob04();
+	}
+
+}

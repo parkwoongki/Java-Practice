@@ -1,0 +1,19 @@
+package Prob01;
+
+import javax.swing.JFrame;
+
+public class Prob01 extends JFrame {
+
+	public Prob01() {
+		// TODO Auto-generated constructor stub
+		setTitle("Let's study Java");
+		setSize(400, 200);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob01();
+	}
+
+}

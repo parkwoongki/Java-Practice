@@ -1,0 +1,68 @@
+package Prob08;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class NorthPanel extends JPanel {
+	private static final long serialVersionUID = -5535909484637830101L;
+
+	public NorthPanel() {
+		// TODO Auto-generated constructor stub
+		setBackground(Color.GRAY);
+		setLayout(new FlowLayout());
+		add(new JButton("열기"));
+		add(new JButton("닫기"));
+		add(new JButton("나가기"));
+	}
+}
+
+class CenterPanel extends JPanel {
+	private static final long serialVersionUID = -8205125920014907946L;
+
+	public CenterPanel() {
+		// TODO Auto-generated constructor stub
+		setBackground(Color.White);
+	}
+}
+
+class SouthPanel extends JPanel {
+	private static final long serialVersionUID = -476345332930971329L;
+
+	public SouthPanel() {
+		// TODO Auto-generated constructor stub
+
+	}
+}
+
+public class Prob08 extends JFrame {
+	private static final long serialVersionUID = -1612551755987352551L;
+
+	public Prob08() {
+		// TODO Auto-generated constructor stub
+		setTitle("여러 개의 패널을 가진 프레임");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		Container c = getContentPane();
+
+		setLayout(new BorderLayout());
+
+		c.add(new NorthPanel(), BorderLayout.NORTH);
+		c.add(new CenterPanel(), BorderLayout.CENTER);
+		c.add(new SouthPanel(), BorderLayout.SOUTH);
+
+		setSize(300, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob08();
+	}
+
+}

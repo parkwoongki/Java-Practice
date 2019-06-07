@@ -1,0 +1,12 @@
+package Prob06;
+
+import javax.swing.JFrame;
+
+public class Prob06 extends JFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package Prob06;
+
+import javax.swing.JFrame;
+
+public class Prob06 extends JFrame {
+	private static final long serialVersionUID = 3281539416848779902L;
+
+	public Prob06() {
+		// TODO Auto-generated constructor stub
+		setTitle("Random Labels");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob06();
+	}
+
+}

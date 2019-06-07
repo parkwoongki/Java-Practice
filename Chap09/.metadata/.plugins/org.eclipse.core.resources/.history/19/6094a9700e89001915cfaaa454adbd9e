@@ -1,0 +1,15 @@
+package Prob03;
+
+import javax.swing.JFrame;
+
+public class Prob03 extends JFrame {
+	public Prob03() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Prob03();
+	}
+
+}
